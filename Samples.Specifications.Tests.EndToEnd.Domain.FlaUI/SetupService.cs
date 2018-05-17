@@ -31,7 +31,8 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain
     class TeardownService : ITeardownService
     {
         public void Teardown()
-        {            
+        {
+            ApplicationContext.Application?.Close();
             ApplicationContext.Application?.Dispose();
         }
     }

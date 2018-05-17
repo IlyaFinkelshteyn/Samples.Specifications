@@ -39,7 +39,7 @@ namespace Samples.Client.Model
         {
             await ServiceRunner.RunAsync(() =>
             {
-                var events = (_eventsProvider.GetLastEvents(_lastEvenTime))
+                var events = _eventsProvider.GetLastEvents(_lastEvenTime).ToArray()
                     .Select(EventMapper.MapToEvent)
                     .ToList();
 

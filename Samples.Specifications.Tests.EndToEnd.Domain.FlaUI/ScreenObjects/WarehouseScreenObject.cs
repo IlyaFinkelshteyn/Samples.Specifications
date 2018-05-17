@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Threading.Tasks;
 using FlaUI.Core.AutomationElements;
 using Samples.Specifications.Tests.Data;
 using Samples.Specifications.Tests.Domain.ScreenObjects;
@@ -81,7 +80,7 @@ namespace Samples.Specifications.Tests.EndToEnd.Domain.ScreenObjects
 
             if (newPrice != null)
             {
-                var priceTextBox = shell.FindFirstDescendant("WarehouseItemPriceTextBox").AsTextBox();
+                var priceTextBox = shell.FindFirstDescendant("WarehouseItemPriceTextBox").AsTextBox();                
                 priceTextBox.Enter(newPrice.ToString());
             }
 
