@@ -57,31 +57,33 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="Attest.Fake.Builders, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Builders.1.2.1-rc2\lib\netstandard2.0\Attest.Fake.Builders.dll</HintPath>
     </Reference>
     <Reference Include="Attest.Fake.Core, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Attest.Fake.Core.1.2.1-rc2\lib\netstandard2.0\Attest.Fake.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.Core.1.2.0\lib\net45\FlaUI.Core.dll</HintPath>
+    <Reference Include="FlaUI.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.Core.2.0.0-alpha6\lib\net45\FlaUI.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.UIA3, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.UIA3.1.2.0\lib\net45\FlaUI.UIA3.dll</HintPath>
+    <Reference Include="FlaUI.UIA3, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.UIA3.2.0.0-alpha6\lib\net45\FlaUI.UIA3.dll</HintPath>
     </Reference>
     <Reference Include="Interop.UIAutomationClient, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.UIA3.1.2.0\lib\net45\Interop.UIAutomationClient.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\FlaUI.UIA3.2.0.0-alpha6\lib\net45\Interop.UIAutomationClient.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="LogoFX.Client.Testing.Contracts, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LogoFX.Client.Tests.Contracts.1.1.1-rc2\lib\netstandard2.0\LogoFX.Client.Testing.Contracts.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="Solid.Patterns.Builder, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Patterns.Builder.1.2.1-rc2\lib\netstandard2.0\Solid.Patterns.Builder.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.IoC, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
+      <HintPath>..\packages\Solid.Practices.IoC.1.2.1-rc4\lib\netstandard2.0\Solid.Practices.IoC.dll</HintPath>
     </Reference>
     <Reference Include="Solid.Practices.Middleware, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Solid.Practices.Middleware.1.2.1-rc2\lib\netstandard2.0\Solid.Practices.Middleware.dll</HintPath>
@@ -91,11 +93,16 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Samples.Specifications.Tests.EndToEnd.Domain\DelegateExtensions.cs">
@@ -136,10 +143,6 @@
     <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers.Contracts\Samples.Specifications.Tests.Steps.Helpers.Contracts.csproj">
       <Project>{80c26b46-70f2-42a4-939b-d6b289600ab6}</Project>
       <Name>Samples.Specifications.Tests.Steps.Helpers.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Samples.Specifications.Tests.Steps.Helpers\Samples.Specifications.Tests.Steps.Helpers.csproj">
-      <Project>{695f7796-e668-49b8-93a7-58f4b8a2c3aa}</Project>
-      <Name>Samples.Specifications.Tests.Steps.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
